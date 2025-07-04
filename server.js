@@ -9,13 +9,15 @@ const users = []
 app.post('/usuarios', (req, res) => {
 
     
-    users.push(req.body)
+    users.push(req.body) // Adiciona o usuário enviado no corpo da requisição ao array users
+    console.log(users) // Exibe o array de usuários no console
     res.send('aqui deu certo')
 
 })
 
 app.get('/usuarios', (req, res) => {
-    res.json(users)
+    res.status(200).json(users) // Define o status da resposta como 200 OK
+    // res.send(users) // Envia a lista de usuários como resposta
 })
 
 app.listen(3000)
@@ -37,3 +39,7 @@ app.listen(3000)
         -deletar um usuario
 
     */
+
+    //Banco de Dados
+    //Victor Rian
+    //Vicvicvic10
